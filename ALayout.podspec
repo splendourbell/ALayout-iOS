@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+            Layout ported from the Android platform. Easy to Code For UI.
                    DESC
 
   spec.homepage     = "https://github.com/splendourbell/ALayout-iOS"
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/splendourbell/ALayout-iOS", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/splendourbell/ALayout-iOS.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ALayout", "ALayout/**/*.{h,m}"
+  spec.source_files  = "ALayoutDemo", "ALayoutDemo/ALayout/**/*.{h,m}"
   #spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "ALayout/**/*.h"
+  spec.public_header_files = "ALayoutDemo/ALayout/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
