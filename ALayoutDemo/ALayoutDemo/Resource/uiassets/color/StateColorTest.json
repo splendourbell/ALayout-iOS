@@ -1,0 +1,13 @@
+{
+  "class": "selector",
+  "children": [{
+      "class": "item",
+      "state_selected": "true",
+      "color": "#333333"
+    },
+    {
+      "class": "item",
+      "color": "#b2a9a9a9"
+    }
+  ]
+}

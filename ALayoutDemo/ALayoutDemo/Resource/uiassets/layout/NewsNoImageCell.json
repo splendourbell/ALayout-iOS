@@ -1,0 +1,122 @@
+{
+  "class": "RelativeLayout",
+  "layout_width": "match_parent",
+  "layout_height": "wrap_content",
+  "background": "@color/white",
+  "action": "@selector/cellClickAction:",
+  "clickable": "true",
+  "children": [
+    {
+      "class": "RelativeLayout",
+      "layout_width": "match_parent",
+      "layout_height": "wrap_content",
+      "background": "@color/white",
+      "paddingTop": "12dp",
+      "id": "titleAndSource",
+      "children": [
+        {
+          "class": "TextView",
+          "layout_width": "wrap_content",
+          "layout_height": "wrap_content",
+          "layout_marginLeft": "12dp",
+          "layout_marginRight": "12dp",
+          "maxLines": "2",
+          "ellipsize": "end",
+          "text": "博士学位仪式博士学位仪式博士学位仪式博士学位仪式博士学位仪式博士学位仪式",
+          "textSize": "14dp",
+          "textColor": "#000",
+          "id": "title"
+        },
+        {
+          "class": "LinearLayout",
+          "layout_width": "wrap_content",
+          "layout_height": "wrap_content",
+          "orientation": "horizontal",
+          "layout_below": "title",
+          "layout_marginTop": "8dp",
+          "layout_marginLeft": "12dp",
+          "layout_marginRight": "12dp",
+          "paddingBottom": "12dp",
+          "id": "bottom",
+          "children": [
+            {
+              "class": "TextView",
+              "layout_width": "wrap_content",
+              "layout_height": "wrap_content",
+              "layout_marginRight": "12dp",
+              "text": "@string/top",
+              "textSize": "14dp",
+              "textColor": "#F00",
+              "lines": "1",
+              "id": "top"
+            },
+            {
+              "class": "TextView",
+              "layout_width": "0dp",
+              "layout_height": "wrap_content",
+              "layout_weight": "1",
+              "layout_gravity": "center_vertical",
+              "textSize": "12dp",
+              "textColor": "#666",
+              "lines": "1",
+              "ellipsize": "end",
+              "text": "央视新闻移动网",
+              "id": "source"
+            },
+            {
+              "class": "TextView",
+              "layout_width": "wrap_content",
+              "layout_height": "wrap_content",
+              "layout_gravity": "center_vertical",
+              "layout_marginLeft": "8dp",
+              "textSize": "12dp",
+              "textColor": "#666",
+              "lines": "1",
+              "text": "368跟帖",
+              "visibility": "gone",
+              "id": "normalComments"
+            },
+            {
+              "class": "TextView",
+              "layout_width": "wrap_content",
+              "layout_height": "wrap_content",
+              "layout_gravity": "center_vertical",
+              "layout_marginLeft": "8dp",
+              "paddingLeft": "6dp",
+              "paddingRight": "6dp",
+              "paddingTop": "3dp",
+              "paddingBottom": "3dp",
+              "textSize": "12dp",
+              "textColor": "#D30",
+              "lines": "1",
+              "text": "1.0万跟帖",
+              "id": "highlightComments",
+              "background": {
+                "class": "shape",
+                "shape": "rectangle",
+                "children": [
+                  {
+                    "class": "stroke",
+                    "width": "1px",
+                    "color": "#D30"
+                  },
+                  {
+                    "class": "corners",
+                    "radius": "1000dp"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "View",
+      "layout_width": "match_parent",
+      "layout_height": "1px",
+      "layout_below": "titleAndSource",
+      "background": "#0a000000"
+    }
+  ]
+}

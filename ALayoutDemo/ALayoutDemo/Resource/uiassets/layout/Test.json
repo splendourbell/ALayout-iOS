@@ -1,0 +1,8 @@
+{
+  "class": "ImageView",
+  "layout_width": "wrap_content",
+  "layout_height": "wrap_content",
+  "src": "@drawable/default",
+  "scaleType": "centerCrop",
+  "id": "image"
+}

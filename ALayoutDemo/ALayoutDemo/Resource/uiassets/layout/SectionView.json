@@ -1,0 +1,23 @@
+{
+  "class": "RelativeLayout",
+  "layout_width": "match_parent",
+  "layout_height": "wrap_content",
+  "background": "#eee",
+  "children": [
+    {
+      "class": "TextView",
+      "layout_width": "wrap_content",
+      "layout_height": "wrap_content",
+      "paddingTop": "5dp",
+      "paddingBottom": "5dp",
+      "textColor": "#000",
+      "textSize": "16dp",
+      "textStyle": "bold",
+      "layout_marginLeft": "12dp",
+      "layout_marginRight": "12dp",
+      "ellipsize": "end",
+      "lines": "1",
+      "id": "sectionTitle"
+    }
+  ]
+}
