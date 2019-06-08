@@ -7,8 +7,9 @@
 //
 
 #import "SwitchControl.h"
-#import <ALayout/ALayout.h>
 #import "Drawable.h"
+#import "AViewCreator.h"
+#import "UIView+Params.h"
 
 @interface SwitchControl ()
 {

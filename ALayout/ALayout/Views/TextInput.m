@@ -7,8 +7,9 @@
 //
 
 #import "TextInput.h"
-#import <ALayout/ALayout.h>
 #import "Drawable.h"
+#import "AViewCreator.h"
+#import "UIView+Params.h"
 
 const NSInteger UIControlEventEditingDidReturn = (1<<25);
 const NSInteger UIControlEventWillBeginEditing = (1<<26);

@@ -7,6 +7,7 @@
 //
 
 #import "VerticalScrollView.h"
+#import "AViewCreator.h"
 
 @implementation VerticalScrollView
 

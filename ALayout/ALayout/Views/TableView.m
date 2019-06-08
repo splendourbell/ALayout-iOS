@@ -7,22 +7,13 @@
 //
 
 #import "TableView.h"
-#import <ALayout/ALayout.h>
 #import "Drawable.h"
+#import "AViewCreator.h"
+#import "UIView+Params.h"
 
 @implementation TableView
 
 RegisterView(TableView)
-
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self)
-//    {
-//        
-//    }
-//    return self;
-//}
 
 - (void)parseAttr:(AttributeReader *)attrReader useDefault:(BOOL)useDefault
 {
