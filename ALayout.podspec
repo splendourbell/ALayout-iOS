@@ -23,47 +23,53 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "6.0"
   spec.source       = { :git => "https://github.com/splendourbell/ALayout-iOS.git", :tag => "master" }
 
-  s.subspec 'Action' do |ss|
+  spec.subspec 'Action' do |ss|
       ss.source_files = 'ALayout/ALayout/Action/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/Action/*.{h}'
   end
 
-  s.subspec 'AttributeReader' do |ss|
+  spec.subspec 'AttributeReader' do |ss|
       ss.source_files = 'ALayout/ALayout/AttributeReader/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/AttributeReader/*.{h}'
   end
 
-  s.subspec 'Drawables' do |ss|
+  spec.subspec 'Drawables' do |ss|
       ss.source_files = 'ALayout/ALayout/Drawables/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/Drawables/*.{h}'
   end
 
-  s.subspec 'Extension/AViewNode' do |ss|
-      ss.source_files = 'ALayout/ALayout/Extension/AViewNode/*.{h,m}'
-      ss.public_header_files = 'ALayout/ALayout/Extension/AViewNode/*.{h}'
+  spec.subspec 'Extension' do |ss|
+    ss.subspec 'AViewNode' do |sss|
+        sss.source_files = 'ALayout/ALayout/Extension/AViewNode/*.{h,m}'
+        sss.public_header_files = 'ALayout/ALayout/Extension/AViewNode/*.{h}'
+    end
   end
 
-  s.subspec 'Extension/DataBinder' do |ss|
-      ss.source_files = 'ALayout/ALayout/Extension/DataBinder/*.{h,m}'
-      ss.public_header_files = 'ALayout/ALayout/Extension/DataBinder/*.{h}'
+  spec.subspec 'Extension' do |ss|
+  ss.subspec 'DataBinder' do |sss|
+      sss.source_files = 'ALayout/ALayout/Extension/DataBinder/*.{h,m}'
+      sss.public_header_files = 'ALayout/ALayout/Extension/DataBinder/*.{h}'
+      end
   end
 
-  s.subspec 'Extension/ScriptDataBinder' do |ss|
-      ss.source_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h,m}'
-      ss.public_header_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h}'
+  spec.subspec 'Extension' do |ss|
+  ss.subspec 'ScriptDataBinder' do |sss|
+      sss.source_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h,m}'
+      sss.public_header_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h}'
+      end
   end
 
-  s.subspec 'ViewGroups' do |ss|
+  spec.subspec 'ViewGroups' do |ss|
       ss.source_files = 'ALayout/ALayout/ViewGroups/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/ViewGroups/*.{h}'
   end
 
-  s.subspec 'ViewParse' do |ss|
+  spec.subspec 'ViewParse' do |ss|
       ss.source_files = 'ALayout/ALayout/ViewParse/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/ViewParse/*.{h}'
   end
 
-  s.subspec 'Views' do |ss|
+  spec.subspec 'Views' do |ss|
       ss.source_files = 'ALayout/ALayout/Views/*.{h,m}'
       ss.public_header_files = 'ALayout/ALayout/Views/*.{h}'
   end
