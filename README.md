@@ -12,3 +12,13 @@ Android 版本在准备开源中。。。
 
 会考虑创建一个QQ群，有兴趣的朋友可以一起继承完善。
 zhonghui815@163.com
+
+
+1 集成方法一
+     
+     使用pod安装ALayout 
+     pod 'ALayout', '~> 1.3.0'
+     
+2 集成方法二，下载git代码，添加 ALayout工程到自己工程
+
+3 添加Linker选项 -ObjC
