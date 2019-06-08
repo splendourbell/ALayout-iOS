@@ -22,3 +22,8 @@ zhonghui815@163.com
 2 集成方法二，下载git代码，添加 ALayout工程到自己工程
 
 3 添加Linker选项 -ObjC
+
+
+JSON 提示工具见
+
+     https://github.com/splendourbell/autocomplete-alayout
