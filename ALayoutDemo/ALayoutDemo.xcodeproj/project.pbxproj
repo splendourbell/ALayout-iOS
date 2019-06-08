@@ -13,16 +13,16 @@
 		3C208DFA22A826B90053E86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C208DF922A826B90053E86C /* Assets.xcassets */; };
 		3C208DFD22A826B90053E86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C208DFB22A826B90053E86C /* LaunchScreen.storyboard */; };
 		3C208E0022A826B90053E86C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208DFF22A826B90053E86C /* main.m */; };
-		3C208E0D22A827530053E86C /* ALayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C208E0B22A827260053E86C /* ALayout.framework */; };
 		3C208E1122A82BBA0053E86C /* uiassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C208E1022A82BBA0053E86C /* uiassets */; };
 		3C208E1722AA426C0053E86C /* DebugRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E1622AA426C0053E86C /* DebugRefreshView.m */; };
 		3C208E2322AA86960053E86C /* ImageView+url.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E2222AA86960053E86C /* ImageView+url.m */; };
+		3CE73D3422AC183B0099B7F7 /* ALayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE73D3322AC18110099B7F7 /* ALayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C208E0A22A827260053E86C /* PBXContainerItemProxy */ = {
+		3CE73D3222AC18110099B7F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3C208E0622A827250053E86C /* ALayout.xcodeproj */;
+			containerPortal = 3CE73D2E22AC18110099B7F7 /* ALayout.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 28DBD3B71ECD725900387856;
 			remoteInfo = ALayout;
@@ -40,11 +40,11 @@
 		3C208DFC22A826B90053E86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C208DFE22A826B90053E86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C208DFF22A826B90053E86C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C208E0622A827250053E86C /* ALayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ALayout.xcodeproj; path = ALayout/ALayout.xcodeproj; sourceTree = "<group>"; };
 		3C208E1022A82BBA0053E86C /* uiassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = uiassets; sourceTree = "<group>"; };
 		3C208E1622AA426C0053E86C /* DebugRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRefreshView.m; sourceTree = "<group>"; };
 		3C208E2122AA86960053E86C /* ImageView+url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageView+url.h"; sourceTree = "<group>"; };
 		3C208E2222AA86960053E86C /* ImageView+url.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ImageView+url.m"; sourceTree = "<group>"; };
+		3CE73D2E22AC18110099B7F7 /* ALayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ALayout.xcodeproj; path = ../ALayout/ALayout.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C208E0D22A827530053E86C /* ALayout.framework in Frameworks */,
+				3CE73D3422AC183B0099B7F7 /* ALayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 		3C208DE422A826B20053E86C = {
 			isa = PBXGroup;
 			children = (
-				3C208E0622A827250053E86C /* ALayout.xcodeproj */,
+				3CE73D2E22AC18110099B7F7 /* ALayout.xcodeproj */,
 				3C208DEF22A826B20053E86C /* ALayoutDemo */,
 				3C208DEE22A826B20053E86C /* Products */,
 				3C208E0C22A827530053E86C /* Frameworks */,
@@ -97,14 +97,6 @@
 			path = ALayoutDemo;
 			sourceTree = "<group>";
 		};
-		3C208E0722A827250053E86C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3C208E0B22A827260053E86C /* ALayout.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3C208E0C22A827530053E86C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +110,14 @@
 				3C208E1022A82BBA0053E86C /* uiassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3CE73D2F22AC18110099B7F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CE73D3322AC18110099B7F7 /* ALayout.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +167,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3C208E0722A827250053E86C /* Products */;
-					ProjectRef = 3C208E0622A827250053E86C /* ALayout.xcodeproj */;
+					ProductGroup = 3CE73D2F22AC18110099B7F7 /* Products */;
+					ProjectRef = 3CE73D2E22AC18110099B7F7 /* ALayout.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -179,11 +179,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3C208E0B22A827260053E86C /* ALayout.framework */ = {
+		3CE73D3322AC18110099B7F7 /* ALayout.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ALayout.framework;
-			remoteRef = 3C208E0A22A827260053E86C /* PBXContainerItemProxy */;
+			remoteRef = 3CE73D3222AC18110099B7F7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

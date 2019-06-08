@@ -8,131 +8,64 @@
 
 Pod::Spec.new do |spec|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   spec.name         = "ALayout"
-  spec.version      = "1.2.0"
+  spec.version      = "1.3.0"
   spec.summary      = "Layout ported from the Android platform"
 
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
             Layout ported from the Android platform. Easy to Code For UI.
                    DESC
 
   spec.homepage     = "https://github.com/splendourbell/ALayout-iOS"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
-
-  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See https://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   spec.license      = "MIT"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.author       = { "Splendour Bell" => "zhonghui815@163.com" }
 
+  spec.platform     = :ios, "6.0"
+  spec.source       = { :git => "https://github.com/splendourbell/ALayout-iOS.git", :tag => "master" }
 
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
+  s.subspec 'Action' do |ss|
+      ss.source_files = 'ALayout/ALayout/Action/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Action/*.{h}'
+  end
 
-  spec.author             = { "Splendour Bell" => "zhonghui815@163.com" }
-  # Or just: spec.author    = "Splendour Bell"
-  # spec.authors            = { "Splendour Bell" => "zhonghui815@163.com" }
-  # spec.social_media_url   = "https://twitter.com/Splendour Bell"
+  s.subspec 'AttributeReader' do |ss|
+      ss.source_files = 'ALayout/ALayout/AttributeReader/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/AttributeReader/*.{h}'
+  end
 
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
+  s.subspec 'Drawables' do |ss|
+      ss.source_files = 'ALayout/ALayout/Drawables/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Drawables/*.{h}'
+  end
 
-   spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  s.subspec 'Extension/AViewNode' do |ss|
+      ss.source_files = 'ALayout/ALayout/Extension/AViewNode/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Extension/AViewNode/*.{h}'
+  end
 
-  #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
+  s.subspec 'Extension/DataBinder' do |ss|
+      ss.source_files = 'ALayout/ALayout/Extension/DataBinder/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Extension/DataBinder/*.{h}'
+  end
 
+  s.subspec 'Extension/ScriptDataBinder' do |ss|
+      ss.source_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Extension/ScriptDataBinder/*.{h}'
+  end
 
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
+  s.subspec 'ViewGroups' do |ss|
+      ss.source_files = 'ALayout/ALayout/ViewGroups/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/ViewGroups/*.{h}'
+  end
 
-  spec.source       = { :git => "https://github.com/splendourbell/ALayout-iOS.git", :tag => "1.2.0" }
+  s.subspec 'ViewParse' do |ss|
+      ss.source_files = 'ALayout/ALayout/ViewParse/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/ViewParse/*.{h}'
+  end
 
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
-
-  spec.source_files  = "ALayoutDemo", "ALayoutDemo/ALayout/**/*.{h,m}"
-  #spec.exclude_files = "Classes/Exclude"
-
-  spec.public_header_files = "ALayoutDemo/ALayout/**/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  s.subspec 'Views' do |ss|
+      ss.source_files = 'ALayout/ALayout/Views/*.{h,m}'
+      ss.public_header_files = 'ALayout/ALayout/Views/*.{h}'
+  end
 
 end
