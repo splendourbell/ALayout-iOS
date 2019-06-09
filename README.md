@@ -27,3 +27,5 @@ zhonghui815@163.com
 JSON 提示工具见
 
      https://github.com/splendourbell/autocomplete-alayout
+     
+https://s33.aconvert.com/convert/p3r68-cdx67/lks9u-vzhjm.gif
