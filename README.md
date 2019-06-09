@@ -28,4 +28,4 @@ JSON 提示工具见
 
      https://github.com/splendourbell/autocomplete-alayout
      
-![i)mage](https://github.com/splendourbell/ALayout-iOS/blob/master/demo.gif)
+![image](https://github.com/splendourbell/ALayout-iOS/blob/master/demo.gif)
