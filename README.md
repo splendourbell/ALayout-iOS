@@ -1,6 +1,8 @@
 # ALayout-iOS
 Layout ported from the Android platform
 
+![image](https://github.com/splendourbell/ALayout-iOS/blob/master/demo.gif)
+
 Android 版本在准备开源中。。。
 
 此布局核心代码，主要是通过移植Android系统布局源码，这样能保持两端一致。
@@ -28,4 +30,4 @@ JSON 提示工具见
 
      https://github.com/splendourbell/autocomplete-alayout
      
-![image](https://github.com/splendourbell/ALayout-iOS/blob/master/demo.gif)
+
