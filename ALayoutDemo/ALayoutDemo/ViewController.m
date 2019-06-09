@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <ALayout/ALayout.h>
+#import "NormalViewController.h"
 
 @interface ViewController ()
 
@@ -103,6 +104,12 @@
 - (void)cellClickAction:(UIControl*)control
 {
     NSDictionary* dict = control.viewParams.extData;
+    if([dict[@"id"] intValue] == 50)
+    {
+        [self.navigationController pushViewController:NormalViewController.new animated:YES];
+        return;
+    }
+    
     UIAlertController* vc = [UIAlertController alertControllerWithTitle:dict[@"type"] message:dict[@"title"] preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         
@@ -134,7 +141,8 @@
           @"author":@"央视新闻移动网",
           @"hotCount":@(500),
           @"isTop":@(true),
-          @"type":@"NoImage"
+          @"type":@"NoImage",
+          @"id":@(100),
       },
       @{
           @"title":@"这个布局核心逻辑是从Android 系统源码移植过来的，与Android几乎保持了一致，因为是为了两端共用，我们同时支持了Android和iOS，Android暂时还在准备开源中...",
@@ -142,7 +150,8 @@
           @"author":@"央视新闻移动网",
           @"hotCount":@(10500),
           @"isTop":@(true),
-          @"type":@"OneImage"
+          @"type":@"OneImage",
+          @"id":@(50),
           },
       @{
           @"title":@"这个布局核心逻辑是从Android 系统源码移植过来的，与Android几乎保持了一致，因为是为了两端共用，我们同时支持了Android和iOS，Android暂时还在准备开源中...",
@@ -150,7 +159,8 @@
           @"author":@"央视新闻移动网",
           @"hotCount":@(83200),
           @"isTop":@(false),
-          @"type":@"BigImage"
+          @"type":@"BigImage",
+          @"id":@(25)
           }
       ];
 }

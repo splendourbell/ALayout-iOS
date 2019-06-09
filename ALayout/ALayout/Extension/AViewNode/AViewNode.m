@@ -104,7 +104,10 @@ static inline NSString* _Nullable layoutToIdentifier(NSString* _Nullable layout)
         [view autoBindData:@{viewId:viewNode.property}];
     }
     [view autoBindSelf:_property];
-    view.viewParams.extData = self.extData;
+    if(self.extData)
+    {
+        view.viewParams.extData = self.extData;
+    }
 }
 
 - (void)updateToViewForHeight:(UIView*)view

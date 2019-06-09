@@ -16,6 +16,7 @@
 		3C208E1122A82BBA0053E86C /* uiassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C208E1022A82BBA0053E86C /* uiassets */; };
 		3C208E1722AA426C0053E86C /* DebugRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E1622AA426C0053E86C /* DebugRefreshView.m */; };
 		3C208E2322AA86960053E86C /* ImageView+url.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E2222AA86960053E86C /* ImageView+url.m */; };
+		3C5F92C422AD57EA005CE9D9 /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5F92C322AD57EA005CE9D9 /* NormalViewController.m */; };
 		3CE73D3422AC183B0099B7F7 /* ALayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE73D3322AC18110099B7F7 /* ALayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		3C208E1622AA426C0053E86C /* DebugRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRefreshView.m; sourceTree = "<group>"; };
 		3C208E2122AA86960053E86C /* ImageView+url.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageView+url.h"; sourceTree = "<group>"; };
 		3C208E2222AA86960053E86C /* ImageView+url.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ImageView+url.m"; sourceTree = "<group>"; };
+		3C5F92C222AD57EA005CE9D9 /* NormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		3C5F92C322AD57EA005CE9D9 /* NormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
 		3CE73D2E22AC18110099B7F7 /* ALayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ALayout.xcodeproj; path = ../ALayout/ALayout.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +96,8 @@
 				3C208DFF22A826B90053E86C /* main.m */,
 				3C208E2122AA86960053E86C /* ImageView+url.h */,
 				3C208E2222AA86960053E86C /* ImageView+url.m */,
+				3C5F92C222AD57EA005CE9D9 /* NormalViewController.h */,
+				3C5F92C322AD57EA005CE9D9 /* NormalViewController.m */,
 			);
 			path = ALayoutDemo;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				3C208E0022A826B90053E86C /* main.m in Sources */,
 				3C208E1722AA426C0053E86C /* DebugRefreshView.m in Sources */,
 				3C208DF222A826B20053E86C /* AppDelegate.m in Sources */,
+				3C5F92C422AD57EA005CE9D9 /* NormalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
