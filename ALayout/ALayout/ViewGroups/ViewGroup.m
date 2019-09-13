@@ -195,4 +195,32 @@
     return view;
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.viewParams.clickable) {
+        [super touchesBegan:touches withEvent:event];
+    }else{
+        [[self nextResponder] touchesBegan:touches withEvent:event];
+    }
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.viewParams.clickable) {
+        [super touchesMoved:touches withEvent:event];
+    }else{
+        [[self nextResponder] touchesMoved:touches withEvent:event];
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.viewParams.clickable) {
+        [super touchesEnded:touches withEvent:event];
+    }else{
+        [[self nextResponder] touchesEnded:touches withEvent:event];
+    }
+}
+
+
 @end

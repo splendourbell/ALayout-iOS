@@ -7,9 +7,8 @@
 //
 
 #import "TextInput.h"
+#import <ALayout/ALayout.h>
 #import "Drawable.h"
-#import "AViewCreator.h"
-#import "UIView+Params.h"
 
 const NSInteger UIControlEventEditingDidReturn = (1<<25);
 const NSInteger UIControlEventWillBeginEditing = (1<<26);
@@ -80,6 +79,14 @@ RegisterView(TextInput)
         {
             _font = [UIFont italicSystemFontOfSize:_textSize];
         }
+        else if (StrEq(@"light", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightLight];
+        }
+        else if (StrEq(@"thin", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightThin];
+        }
         else if(!_typeface)
         {
             _font = [UIFont systemFontOfSize:_textSize];
@@ -99,11 +106,13 @@ RegisterView(TextInput)
     if(textColorDrawable)
     {
         __weak typeof(self) weakSelf = self;
+        __weak Drawable* weak_textColorDrawable = textColorDrawable;
         [self addDidLayoutBlock:@"TextLabel_textColorDrawable" block:^(CGRect rect) {
             id strongSelf = weakSelf;
-            if(strongSelf)
+            Drawable* strong_textColorDrawable = weak_textColorDrawable;
+            if(strongSelf && strong_textColorDrawable)
             {
-                [textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
+                [strong_textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
             }
         }];
     }

@@ -7,9 +7,8 @@
 //
 
 #import "TextArea.h"
+#import <ALayout/ALayout.h>
 #import "Drawable.h"
-#import "AViewCreator.h"
-#import "UIView+Params.h"
 
 @interface TextArea()<UITextViewDelegate>
 {
@@ -53,11 +52,13 @@ RegisterView(TextArea)
     if(textColorDrawable)
     {
         __weak typeof(self) weakSelf = self;
+        __weak Drawable* weak_textColorDrawable = textColorDrawable;
         [self addDidLayoutBlock:@"TextLabel_textColorDrawable" block:^(CGRect rect) {
             id strongSelf = weakSelf;
+            Drawable* strong_textColorDrawable = weak_textColorDrawable;
             if(strongSelf)
             {
-                [textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
+                [strong_textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
             }
         }];
     }
@@ -204,6 +205,14 @@ RegisterView(TextArea)
         {
             _font = [UIFont italicSystemFontOfSize:_textSize];
         }
+        else if (StrEq(@"light", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightLight];
+        }
+        else if (StrEq(@"thin", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightThin];
+        }
         else if(!_typeface)
         {
             _font = [UIFont systemFontOfSize:_textSize];
@@ -348,6 +357,18 @@ RegisterView(TextArea)
         self.textView.frame = cFrame;
         [self.textView scrollRangeToVisible:selectRange];
     }
+    if (!self.textView.isFirstResponder)
+    {
+        BOOL needHidden = _textView.text.length > 0;
+        if(self.placeHanderLabel.hidden != needHidden)
+        {
+            self.placeHanderLabel.hidden = needHidden;
+        }
+    }
+    else if(!self.placeHanderLabel.hidden)
+    {
+        self.placeHanderLabel.hidden = true;
+    }
     //这个放在这会影响超过最大输入的中文输入
 //     [self checkInputText];
 }
@@ -418,7 +439,7 @@ RegisterView(TextArea)
         }
     }
     
-    if (self.textView.isFirstResponder == false)
+    if (!self.textView.isFirstResponder)
     {
         self.placeHanderLabel.hidden = (length > 0);
     }

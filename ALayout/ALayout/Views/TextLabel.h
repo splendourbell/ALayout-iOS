@@ -61,5 +61,7 @@
 
 @property (nonatomic, readonly) CGRect contentRect;
 
+@property (nonatomic, strong) UIFont* font;
+
 @end
 

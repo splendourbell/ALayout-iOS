@@ -45,11 +45,13 @@
     if(textColorDrawable)
     {
         __weak typeof(self) weakSelf = self;
+        __weak Drawable* weak_textColorDrawable = textColorDrawable;
         [self addDidLayoutBlock:@"TextLabel_textColorDrawable" block:^(CGRect rect) {
             id strongSelf = weakSelf;
-            if(strongSelf)
+            Drawable* strong_textColorDrawable = weak_textColorDrawable;
+            if(strongSelf && strong_textColorDrawable)
             {
-                [textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
+                [strong_textColorDrawable attachUIColor:strongSelf forKey:@"textColor" stateView:strongSelf];
             }
         }];
     }
@@ -211,6 +213,13 @@
         else if(StrEq(@"italic", _textStyle))
         {
             _font = [UIFont italicSystemFontOfSize:_textSize];
+        }
+        else if (StrEq(@"light", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightLight];
+        }else if (StrEq(@"thin", _textStyle))
+        {
+            _font = [UIFont systemFontOfSize:_textSize weight:UIFontWeightThin];
         }
         else if(!_typeface)
         {
@@ -394,7 +403,7 @@
     {
         CGRect bounds   = CGRectZero;
         CGSize sizeTmp  = CGSizeMake(widthSpec.size, heightSpec.size);
-        if (_needStrBounds || CGSizeEqualToSize(sizeTmp, _strBaseSize))
+        if (_needStrBounds || !CGSizeEqualToSize(sizeTmp, _strBaseSize))
         {
             _needStrBounds  = false;
             _strBaseSize    = sizeTmp;
@@ -760,7 +769,7 @@
         CGFloat ascent;
         CGFloat descent;
         CGFloat leading;
-        CTLineRef lineRef= CFArrayGetValueAtIndex(lines, index);
+        CTLineRef lineRef= CFArrayGetValueAtIndex(lines, i);
         CTLineGetTypographicBounds(lineRef, &ascent, &descent, &leading);
         if(0 == i)
         {
@@ -774,7 +783,7 @@
     
     NSMutableAttributedString *tmpSubStr = [[attStr attributedSubstringFromRange:NSMakeRange(0, lastIndex.location + lastIndex.length)] mutableCopy];
     CGRect rect = [tmpSubStr boundingRectWithSize:CGSizeMake(baseWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
-    rect.size.height = totalHeight;
+    rect.size.height = MAX(totalHeight, rect.size.height);
     return rect;
 }
 
@@ -799,6 +808,17 @@ DEF_NEEDLAYOUT_SETTER(int,      MinLines,   minLines)
     {
         _textSize   = textSize;
         _font       = nil;
+        _needResetTextLabel = true;
+        _textAttributedString = nil;
+        [self requestLayout];
+    }
+}
+
+- (void)setFont:(UIFont*)font
+{
+    if(_font != font)
+    {
+        _font = font;
         _needResetTextLabel = true;
         _textAttributedString = nil;
         [self requestLayout];

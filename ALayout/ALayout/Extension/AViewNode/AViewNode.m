@@ -7,7 +7,7 @@
 //
 
 #import "AViewNode.h"
-#import "UIView+DataBinder.h"
+#import <ALayout/ALayout.h>
 
 #define JoinStr(...) [@[__VA_ARGS__] componentsJoinedByString:@""]
 #define JoinFmt(format, ...) [NSString stringWithFormat:format, __VA_ARGS__]
@@ -104,10 +104,7 @@ static inline NSString* _Nullable layoutToIdentifier(NSString* _Nullable layout)
         [view autoBindData:@{viewId:viewNode.property}];
     }
     [view autoBindSelf:_property];
-    if(self.extData)
-    {
-        view.viewParams.extData = self.extData;
-    }
+    view.viewParams.extData = self.extData;
 }
 
 - (void)updateToViewForHeight:(UIView*)view

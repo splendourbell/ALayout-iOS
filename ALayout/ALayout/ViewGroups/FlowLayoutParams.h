@@ -6,7 +6,7 @@
 //  Copyright © 2017年 com.aiospace.zone. All rights reserved.
 //
 
-#import "MarginLayoutParams.h"
+#import <ALayout/ALayout.h>
 
 @interface FlowLayoutParams : MarginLayoutParams
 

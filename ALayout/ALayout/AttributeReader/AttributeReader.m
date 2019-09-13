@@ -507,6 +507,8 @@ static void (^gManagerConfigBlock)(ResourceManager* manager);
 {
     NSDictionary* _attribute;
     NSMutableDictionary<NSString*, id>* _cacheObject;
+    CGFloat _scale;
+    CGFloat _widthScale;
 }
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary resMgr:(ResourceManager*)resMgr
@@ -516,6 +518,8 @@ static void (^gManagerConfigBlock)(ResourceManager* manager);
         _attribute = dictionary;
         _resourceManager = resMgr;
         _cacheObject = [NSMutableDictionary new];
+        _scale = 1 / UIScreen.mainScreen.scale;
+        _widthScale = UIScreen.mainScreen.bounds.size.width / 375;
         assert(resMgr);
     }
     return self;
@@ -591,7 +595,7 @@ static void (^gManagerConfigBlock)(ResourceManager* manager);
             id value = [self.resourceManager dimenForName:info.value];
             return [self parse_Dimension:value default:defValue];
         }
-        else if([strValue hasSuffix:@"dp"] || [strValue hasSuffix:@"px"])
+        else if([strValue hasSuffix:@"dp"] || [strValue hasSuffix:@"px"] || [strValue hasSuffix:@"sp"])
         {
             return [self parse_Dimension:strValue default:defValue];
         }
@@ -616,7 +620,14 @@ static void (^gManagerConfigBlock)(ResourceManager* manager);
         else if([strValue hasSuffix:@"px"])
         {
             strValue = [strValue substringToIndex:strValue.length-2];
-            return [strValue doubleValue] * 750 / 1080;//TODO: OR  * 2 / 3 ?
+            CGFloat ret = [strValue doubleValue];
+            return ((NSInteger)((ret * _scale + 0.000005) * 100000)) / 100000.0;
+        }
+        else if([strValue hasSuffix:@"sp"])
+        {
+            strValue = [strValue substringToIndex:strValue.length-2];
+            CGFloat ret = [strValue doubleValue];
+            return ret * _widthScale;
         }
         else
         {

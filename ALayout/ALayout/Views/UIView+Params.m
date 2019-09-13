@@ -218,7 +218,7 @@ void RegisterViewParsePropertyByClass(Class cls, ParseAttrBlock parseAttrBlock)
             typeof(self) strongSelf = weakSelf;
             if(strongSelf)
             {
-                [viewParams.backgroud attachBackground:strongSelf.layer stateView:strongSelf];
+                [strongSelf.viewParams.backgroud attachBackground:strongSelf.layer stateView:strongSelf];
             }
         }];
     }

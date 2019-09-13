@@ -93,6 +93,8 @@
 		3C208E2A22AAC38F0053E86C /* AViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E2622AAC38E0053E86C /* AViewNode.m */; };
 		3C208E2B22AAC38F0053E86C /* TableViewNodeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C208E2722AAC38E0053E86C /* TableViewNodeAdapter.m */; };
 		3C208E2C22AAC38F0053E86C /* AViewNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C208E2822AAC38E0053E86C /* AViewNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CD3DFF3232C2055005A606A /* EffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD3DFF1232C2055005A606A /* EffectView.m */; };
+		3CD3DFF4232C2055005A606A /* EffectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD3DFF2232C2055005A606A /* EffectView.h */; };
 		9A00B3871ED81FD4003554D9 /* TextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A00B3851ED81FD4003554D9 /* TextInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A00B3881ED81FD4003554D9 /* TextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A00B3861ED81FD4003554D9 /* TextInput.m */; };
 		9A00B38B1ED82077003554D9 /* TextArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A00B3891ED82077003554D9 /* TextArea.h */; };
@@ -194,6 +196,8 @@
 		3C208E2622AAC38E0053E86C /* AViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewNode.m; sourceTree = "<group>"; };
 		3C208E2722AAC38E0053E86C /* TableViewNodeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewNodeAdapter.m; sourceTree = "<group>"; };
 		3C208E2822AAC38E0053E86C /* AViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AViewNode.h; sourceTree = "<group>"; };
+		3CD3DFF1232C2055005A606A /* EffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectView.m; sourceTree = "<group>"; };
+		3CD3DFF2232C2055005A606A /* EffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectView.h; sourceTree = "<group>"; };
 		9A00B3851ED81FD4003554D9 /* TextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInput.h; sourceTree = "<group>"; };
 		9A00B3861ED81FD4003554D9 /* TextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInput.m; sourceTree = "<group>"; };
 		9A00B3891ED82077003554D9 /* TextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextArea.h; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 		28DBD3C21ECD731900387856 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CD3DFF2232C2055005A606A /* EffectView.h */,
+				3CD3DFF1232C2055005A606A /* EffectView.m */,
 				280B8154228134BB004B7257 /* ASliderView.h */,
 				280B8155228134BB004B7257 /* ASliderView.m */,
 				9A00B3851ED81FD4003554D9 /* TextInput.h */,
@@ -450,6 +456,7 @@
 				3C208E2C22AAC38F0053E86C /* AViewNode.h in Headers */,
 				9A00B3871ED81FD4003554D9 /* TextInput.h in Headers */,
 				280B814622811AEA004B7257 /* HorizontalScrollView.h in Headers */,
+				3CD3DFF4232C2055005A606A /* EffectView.h in Headers */,
 				28DBD4221ECD731A00387856 /* RelativeLayoutParams.h in Headers */,
 				3C208E2922AAC38F0053E86C /* TableViewNodeAdapter.h in Headers */,
 				28DBD4261ECD731A00387856 /* ViewGroup.h in Headers */,
@@ -561,6 +568,7 @@
 				280B8157228134BB004B7257 /* ASliderView.m in Sources */,
 				28DBD4291ECD731A00387856 /* BitmapDrawable.m in Sources */,
 				28DBD42D1ECD731A00387856 /* Drawable.m in Sources */,
+				3CD3DFF3232C2055005A606A /* EffectView.m in Sources */,
 				28DBD4191ECD731A00387856 /* LinearLayout.m in Sources */,
 				9A3FF1C11EFA157C004F4212 /* VerticalScrollView.m in Sources */,
 				28DBD42F1ECD731A00387856 /* DrawableFactory.m in Sources */,

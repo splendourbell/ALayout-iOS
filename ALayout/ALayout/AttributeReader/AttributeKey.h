@@ -32,6 +32,7 @@
 #define A_clearButtonMode                   clearButtonMode
 #define A_color                             color
 #define A_corners                           corners
+#define A_effectStyle                       effectStyle
 #define A_exclusiveTouch                    exclusiveTouch
 #define A_dashGap                           dashGap
 #define A_dashWidth                         dashWidth
@@ -175,6 +176,7 @@
 #define A_typeface                          typeface
 #define A_url                               url
 #define A_useLevel                          useLevel
+#define A_vibrancy                          vibrancy
 #define A_visibility                        visibility
 #define A_ios_action                        action
 #define A_weightSum                         weightSum
