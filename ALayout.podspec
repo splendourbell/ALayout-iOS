@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ALayout"
-  spec.version      = "1.3.0"
+  spec.version      = "1.5.0"
   spec.summary      = "Layout ported from the Android platform"
 
   spec.description  = <<-DESC
