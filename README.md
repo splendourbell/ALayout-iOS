@@ -3,8 +3,6 @@ Layout ported from the Android platform
 
 ![image](https://github.com/splendourbell/ALayout-iOS/blob/master/demo.gif)
 
-Android 版本在准备开源中。。。
-
 此布局核心代码，主要是通过移植Android系统布局源码，这样能保持两端一致。
 不一致的属性，两端分别通过自定义控件来达到统一的样式与表现。
 对于客户端，跨平台首要的核心，其实也是UI上的统一。
